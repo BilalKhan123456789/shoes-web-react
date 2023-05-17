@@ -15,6 +15,7 @@ import img12 from "../Images/12.png"
 import AOS from "aos";
 import 'aos/dist/aos.css';
 
+import gallery from "../Images/our galleru.png"
 
 
 
@@ -27,8 +28,8 @@ class Gallery extends React.Component {
   render() {
     return (
       <>
-        <div className="container" style={{ marginTop: "50px" }}>
-          <h1>Our Gallery</h1>
+        <div className="container" style={{ marginTop: "30px" }}>
+<img src={gallery} alt="" style={{ marginLeft:"30%"}} />
           <div class="row">
             <div class="column">
 

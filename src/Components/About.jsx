@@ -12,10 +12,14 @@ class About extends React.Component {
             <img src={img1} class="pic" />
             <div class="text">
               <h2>About Us</h2>
-              <h5>All Types of Printing & <span>Design</span></h5>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita natus ad sed harum itaque ullam enim quas, veniam accusantium, quia animi id eos adipisci iusto molestias asperiores explicabo cum vero atque amet corporis! Soluta illum facere consequuntur magni. Ullam dolorem repudiandae cumque voluptate consequatur consectetur, eos provident necessitatibus reiciendis corrupti!</p>
+<p>
+Our KBH Shoe Web
+
+Welcome to our KBH shoe web, where we're dedicated to providing you with the finest footwear options to suit your style, comfort, and performance needs. We understand that shoes are more than just accessories; they are an essential part of your daily life, helping you move confidently and express your unique personality. That's why we're passionate about curating a diverse range of high-quality shoes that cater to all tastes and preferences.</p>
+
+
+
               <div class="data">
-                <a href="#" class="hire">Hire Me</a>
               </div>
             </div>
           </div>
