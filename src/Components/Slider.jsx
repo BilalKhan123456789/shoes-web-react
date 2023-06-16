@@ -13,10 +13,17 @@ import img4 from "../Images/4.png"
 import aboutimg from '../Images/About.jpg'
 import lastpic from '../Images/LastPic.jpg'
 
+import { BsFillArrowRightCircleFill} from 'react-icons/bs';
+import { BsYoutube} from 'react-icons/bs';
+import { ImFacebook2} from 'react-icons/im';
+import {GrInstagram} from 'react-icons/gr';
+
+
 
 
 import AOS from "aos";
 import 'aos/dist/aos.css';
+import Footer from "./Footer";
 
 
 
@@ -142,6 +149,12 @@ kBH established itself as a trusted source of unique footwear as we proudly anno
     <div className="col" style={{marginTop:"20px" , fontWeight:"bolder"}}>
 <img src={lastpic}  style={{width:"100%"}} alt="" />
  </div></div></div>
+
+{/* Footer */}
+
+<Footer/>
+
+
 
 
 

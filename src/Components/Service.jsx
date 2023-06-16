@@ -1,5 +1,10 @@
 import React from "react";
-import "./Service.css";
+import { Link } from "react-router-dom";
+import { RiShoppingBag3Line } from 'react-icons/ri';
+
+
+
+
 
 class Service extends React.Component{
 
@@ -7,39 +12,32 @@ class Service extends React.Component{
     render(){
         return(
             <>
-    <h1 style={{marginTop:"80px"}}>My Services</h1>
-
-  <main>
-    <section>
-      <h2>The Palm Residency </h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc consectetur pharetra nisi, et hendrerit elit mattis vel. Nulla ac sem sagittis, commodo arcu eu, suscipit purus.</p>
-      <button>Veiw</button>
-    </section>
-
-    <section>
-      <h2>Samia DownTown</h2>
-      <p>Donec pulvinar facilisis est vel dignissim. Nulla facilisi. Aliquam consequat turpis vitae tellus iaculis, vitae consequat ligula semper. Vestibulum hendrerit risus auctor, scelerisque massa eget, pulvinar neque.</p>
-      <button>Veiw</button>
-    </section>
-
-    <section>
-      <h2>Shams Icon</h2>
-      <p>Donec pulvinar facilisis est vel dignissim. Nulla facilisi. Aliquam consequat turpis vitae tellus iaculis, vitae consequat ligula semper. Vestibulum hendrerit risus auctor, scelerisque massa eget, pulvinar neque.</p>
-      <button>Veiw</button>
-    </section>
-
-    <section>
-      <h2>Fazal Sun City</h2>
-      <p>Donec pulvinar facilisis est vel dignissim. Nulla facilisi. Aliquam consequat turpis vitae tellus iaculis, vitae consequat ligula semper. Vestibulum hendrerit risus auctor, scelerisque massa eget, pulvinar neque.</p>
-      <button>Veiw</button>
-    </section>
-
-    <section>
-      <h2>Imran Residency</h2>
-      <p>Donec pulvinar facilisis est vel dignissim. Nulla facilisi. Aliquam consequat turpis vitae tellus iaculis, vitae consequat ligula semper. Vestibulum hendrerit risus auctor, scelerisque massa eget, pulvinar neque.</p>
-      <button>Veiw</button>
-    </section>
-  </main>
+            <br /> <br />
+   <center> <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Show Your Cart</button> </center>
+   <br /> <br />    <br />
+<div className="d-flex" style={{alignContent:"center"  ,justifyContent:"center"}}>
+<center>
+<b>Your Cart is Empty</b><br /> <br />
+<button type="button" class="btn btn-outline-dark">Continue Shopping</button>
+ <br /> <br /><br />
+<b>Have an Account? <br /> <br />
+<Link to={"/login"} > Login </Link> 
+ to Check out Faster
+</b>
+</center>
+</div>
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasRightLabel"> Cart</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+   <center>
+   <b style={{color:"gray"}} > <RiShoppingBag3Line style={{fontSize:"50px",marginTop:"200px"}}/> <br />
+    Your Cart is Empty</b>
+    </center> 
+  </div>
+</div>
             </>
         )
     }

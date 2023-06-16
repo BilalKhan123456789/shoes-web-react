@@ -2,7 +2,6 @@ import React from 'react'
 import { BsFillArrowRightCircleFill} from 'react-icons/bs';
 import { BsYoutube} from 'react-icons/bs';
 import { ImFacebook2} from 'react-icons/im';
-
 import {GrInstagram} from 'react-icons/gr';
 
 
