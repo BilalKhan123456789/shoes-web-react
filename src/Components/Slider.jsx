@@ -129,21 +129,26 @@ render(){
 kBH established itself as a trusted source of unique footwear as we proudly announce our products as “Made in Pakistan ''. 
   KBH dedicates itself to quality, unique design, and utmost comfort. Come join the spirit of ultimate
   fashion footwear to indulge yourself with uniqueness & sophistication which is constructed with high-quality craftsmanship.</p>
-  <img src={aboutimg} alt="" style={{width:"100%"}} />
+  <img src={aboutimg} alt="" style={{width:"100%" , borderRadius:"20px"}} />
 </div>
 
   </div>
+  <br /> <br />
 </div>
 
 {/* forth Part */}
 <div className="container-fluid " >
   <div className="row">
     <div className="col" style={{marginTop:"20px" , fontWeight:"bolder"}}>
-<img src={lastpic} style={{width:"100%"}} alt="" />
+<img src={lastpic}  style={{width:"100%"}} alt="" />
+ </div></div></div>
 
-    </div>
-    </div>
-    </div>
+
+
+
+
+
+
         </>
     )
 }
