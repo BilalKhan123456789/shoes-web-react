@@ -19,8 +19,7 @@ Welcome to our KBH shoe web, where we're dedicated to providing you with the fin
 
 
 
-              <div class="data">
-              </div>
+             
             </div>
           </div>
         </section>

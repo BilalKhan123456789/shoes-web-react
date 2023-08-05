@@ -2,41 +2,34 @@
 // import { db } from "../Config/firebase";
 // import { ref } from "firebase/database";
 import "./Product.css"
-import {  ref,get, push, set } from "firebase/database";
+import {  ref,get } from "firebase/database";
 import { db } from "../Config/firebase";
 import React,{useState,useEffect} from "react";
 import { Button } from "react-bootstrap";
-
 import Card from 'react-bootstrap/Card';
 import { useNavigate } from "react-router-dom";
 
 
 
-const Service = () => {
-  const nav= useNavigate()
 
-  const [data,setdata] = useState([])
-  
+const Product = () => {
+
+  const nav = useNavigate()
+
   const [val,setval] = useState()
 
-  const getvalue=(e)=>{
-
-    setval(e.target.value)
-    
-    
-    localStorage.setItem("size",e.target.value)
-    
-    console.log(val)
-    
-    }
+  
 
 
 
+const getvalue=(e)=>{
+
+setval(e.target.value)
 
 
-const COD =(v,i)=>{
+localStorage.setItem("size",e.target.value)
 
-  nav(`/cod/${v.cat}/${v.key}`)
+console.log(val)
 
 }
 
@@ -45,9 +38,24 @@ const COD =(v,i)=>{
 
 
 
+  
+  const [data,setdata] = useState([])
+
+
+  const COD =(v,i)=>{
+    nav(`/cod/${v.cat}/${v.key}`)
+  }
+  
+
+
+
 
   useEffect(()=>{
- let data1 = ref(db,"kids_Collection")
+
+
+
+  
+    let data1 = ref(db,"Men_Collection")
 
     get(data1).then((snap) => {
         console.log(snap.val())
@@ -71,19 +79,20 @@ console.log(data)
   return (
     <div>
       <br />
-      <div className="container-fluid">
+      <div className="container">
         <div className="row">
         {
   data.map((v,i)=>{
     return(
       <>
-       <div className="col mt-3" col-lg-3 md-4 sm-6 col-12>
+       <div className="col mt-5" col-lg-3 md-4 sm-6 col-12>
 
        <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={v.Image} style={{height: '15rem' }}  />
+       <Card.Img variant="top" src={v.Image} style={{height: '15rem' ,  }}  />
       <Card.Body>
-      <Card.Title className="text-primary">{v.title}</Card.Title>
-        <Card.Title>Price: Rs {v.price}</Card.Title>  
+        <Card.Title className="text-primary">{v.title}</Card.Title>
+        <Card.Title>Price: Rs {v.price}</Card.Title>
+
 
         <div class="mydict">
 	<div>
@@ -116,20 +125,20 @@ console.log(data)
 
 
 
- 
+        {/* <Button onClick={()=>size()}  className="rounded-circle"  variant="outline-dark">{v.size38}</Button>
+        <Button onClick={()=>size()}    className="rounded-circle"  variant="outline-dark">{v.size39}</Button>
+        <Button onClick={()=>size()}   className="rounded-circle"  variant="outline-dark">{v.size40}</Button>
+        <Button onClick={()=>size()}    className="rounded-circle"  variant="outline-dark">{v.size41}</Button>
+        <Button onClick={()=>size()}   className="rounded-circle" variant="outline-dark">{v.size42}</Button> */}
 
      
-<br /> <br />
-<button  className="bg-warning p-2 text-dark rounded-3"  onClick={()=>COD(v,i)}>Order Now</button>
-
+ 
+<br />
+        <button  className="bg-warning p-2 text-dark rounded-3"  onClick={()=>COD(v,i)}>Order Now</button>
 
 
       </Card.Body>
     </Card>
-
-
-
-
 
 
 
@@ -152,5 +161,5 @@ console.log(data)
   );
 };
 
-export default Service;
+export default Product;
 

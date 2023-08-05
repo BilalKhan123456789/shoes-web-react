@@ -9,14 +9,15 @@ function Home() {
     <>
       <div>
         <Navbar
-          bg="smoke"
+          bg="light"
+          className="w-100"
           expand="lg"
           style={{ borderBottom: "1px solid black" }}
         >
           <Container fluid>
             <Navbar.Brand href="#">
               <Link to="/">
-                <img src={Images} alt="" style={{ height: "40px" }} />
+                <img src={Images} alt="" style={{ height: "50px" }} />
               </Link>
             </Navbar.Brand>
 
@@ -26,16 +27,25 @@ function Home() {
                 className="me-auto my-2 my-lg-0"
                 style={{
                   display: "flex",
-                  marginLeft: "300px",
+                  marginLeft: "350px",
                 }}
                 navbarScroll
               >
                 <Nav.Link>
                   <Link
-                    to="footer"
+                    to="/"
                     style={{ textDecoration: "none", color: "black" }}
                   >
-                    WishList
+                    Home
+                  </Link>
+                </Nav.Link>
+
+                <Nav.Link>
+                  <Link
+                    to="/product"
+                    style={{ textDecoration: "none", color: "black" }}
+                  >
+                    Men
                   </Link>
                 </Nav.Link>
                 <Nav.Link>
@@ -43,7 +53,7 @@ function Home() {
                     to="/service"
                     style={{ textDecoration: "none", color: "black" }}
                   >
-                    Cart
+                    Kids
                   </Link>
                 </Nav.Link>
                 <Nav.Link>
@@ -51,9 +61,17 @@ function Home() {
                     to="/login"
                     style={{ textDecoration: "none", color: "black" }}
                   >
-                    Account
+                    About us
                   </Link>
                 </Nav.Link>
+                {/* <Nav.Link>
+                  <Link
+                    to="/product"
+                    style={{ textDecoration: "none", color: "black" }}
+                  >
+                    Product
+                  </Link>
+                </Nav.Link> */}
               </Nav>
             </Navbar.Collapse>
           </Container>
